@@ -1,0 +1,7 @@
+# derived state , computed state 
+
+# this is very common problem which we can encounter that after updating a large peice of state if we are again utilizing the some slice of state somewhere else that state will be new refrencering the base (initial state) and the reason for that we are not deriveing state from the original state so we can listen always that changes 
+
+example in this code  
+
+here is the simple example given we can see the bug if we don,t use the derived state  so in this there is product and there incrememt and decrement button and there is choose button which will select the product if don,t derived state means if we choose our product and in setter function we saved the product then the slice of that product is saved for the chosen one and it is now different from the base state so after selecting the product if we start increasing or decreasing the product count the selected product count at bottom is not affecting and that's not right since the count has been incresed so to solve such issue we always save the id of selected product and provide product found logic seprately which will look for the state changes respect to this id only so if in base state the count has been increased our derived state will also listen the changes and update accordingly   
