@@ -12,7 +12,7 @@ export class FocusInput extends Component {
     // goal is to access the ref  component from  parent component
 
     clickHandler = ()=>{
-       console.log(this.componentRef); // this current property has all the child component detail including state , method everythung 
+       console.log(this.componentRef); // this current property has all the child component detail including state , method everything 
        this.componentRef.current.focusInputHandler()
     }
 

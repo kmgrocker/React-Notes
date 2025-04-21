@@ -8,10 +8,17 @@ export class Input extends Component {
       }
       this.inputRef = React.createRef()
     }
-
+     // focus control from parent
+     
     focusInputHandler=()=>{
         this.inputRef.current.focus()
     }
+
+    // focus on load
+
+    /* componentDidMount(){
+        this.inputRef.current.focus()
+    } */
   render() {
     return (
       <div>

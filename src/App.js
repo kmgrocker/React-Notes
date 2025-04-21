@@ -42,6 +42,9 @@ import { LayOutCompOne } from './Component/Hooks/useLayOutEffect/LayOutCompOne';
 import { LayOutCompTwo } from './Component/Hooks/useLayOutEffect/LayOutCompTwo';
 import { ExampleOne } from './Component/Hooks/useTransition/ExampleOne';
 
+import ClassContainerComp from './Component/ClassComponent/ClassContainerComp';
+import ChallengeContainer from './Challenges/ChallengeContainer';
+
 
 export const userContext = React.createContext();
 export const channelContext = React.createContext();
@@ -54,7 +57,12 @@ function App() {
    <>
    <div className="App">
    
-   <ExampleOne />
+   {/* <ClassContainerComp/> */}
+
+
+   <ChallengeContainer/>
+
+   {/* <ExampleOne /> */}
    
    {/* Layout Effect Testing  */}
 

@@ -1,4 +1,4 @@
-//! a better imlementation of useSate is that always capture the previous state when using updater function similar in class based component 
+//! a better implementation of useSate is that always capture the previous state when using updater function similar in class based component 
 
 import React,{useState} from 'react'
 

@@ -12,6 +12,7 @@ export class MyComponent extends React.Component {
   }
 
   componentDidMount() {
+    console.log("this.refs.myComponentDiv", this.refs);
     this.refs.myComponentDiv.addEventListener('click', this.clickHandler);
   }
 
