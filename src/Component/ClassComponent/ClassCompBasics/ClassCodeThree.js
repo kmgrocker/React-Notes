@@ -34,7 +34,7 @@ export class ClassCodeThree extends Component {
     this.setState({ name: 'name Three' });
   }
 
-  // with four in order to pass a param you have to use bind agin in the function
+  // with four in order to pass a param you have to use bind again in the function
   clickHandlerFour() {
     console.log('this four', this);
     this.setState({ name: 'name Four' });

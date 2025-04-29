@@ -2,6 +2,7 @@
 
 https://reactjs.org/docs/hooks-reference.html#usememo 
 
+
 ``` js 
 const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 
@@ -16,6 +17,7 @@ const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
 4. `You may rely on useMemo as a performance optimization, not as a semantic guarantee. In the future, React may choose to “forget” some previously memoized values and recalculate them on next render, e.g. to free memory for offscreen components. Write your code so that it still works without useMemo — and then add it to optimize performance.`
 
 # Resources 
+https://www.youtube.com/watch?v=6-BfMpTT2PE 
 
 https://www.youtube.com/watch?v=DEPwA3mv_R8 (Jack herington)
 

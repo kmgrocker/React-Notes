@@ -10,11 +10,11 @@ export class ClassMouse extends Component {
       }
     }
 
-    // ! here we can see the event is registered once in componentDidMount will take care of that and then logMousePostion which will run that event will fire again and again 
+    // ! here we can see the event is registered once in componentDidMount will take care of that and then logMousePosition which will run that event will fire again and again 
 
-    // ! that running once effect in useEffect will be achieved only if we provoide the empty array dependency to it otherwise it will register the lister again and again 
+    // ! that running once effect in useEffect will be achieved only if we provide the empty array dependency to it otherwise it will register the lister again and again 
 
-    // ! NOTE and most imp thing to note out that we should clear all event which are registerd in cleaning function for class and Function component the effect of  not cleaning can be seen in MouseContainer component which will show that even the component which have the listener inside them are registerd will be in dom even after removing
+    // ! NOTE and most imp thing to note out that we should clear all event which are registered in cleaning function for class and Function component the effect of  not cleaning can be seen in MouseContainer component which will show that even the component which have the listener inside them are registered will be in dom even after removing
 
     componentDidMount(){
         console.log('componentDidMount ran once');

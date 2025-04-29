@@ -13,7 +13,7 @@ function reducer(state,action){
      case 'FETCH_SUCCESS':
         return {...state,loading:false,data:action.payload}
      case 'FETCH_FAIL':
-        return {...state,loading:true,error:'Something went wrong',data:{}}
+        return {...state,loading:false,error:'Something went wrong',data:{}}
      default:
         return state
   }
@@ -36,10 +36,11 @@ export const DataFerchingTwo = () => {
 
   return (
     <div>
-      {state.loading ? <p>Loading .....</p> :  (<div> 
+      {(state.loading && !state.error )&&  <p>Loading .....</p>}
+      {(!state.loading && !state.error )&&  <div> 
             <p>below is the first post body from the post coming from the API</p>
             <b>{ state.data.body}</b> 
-        </div>)}
+        </div>}
          
         {state.error ? state.error: null}
     </div>

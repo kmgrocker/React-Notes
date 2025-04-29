@@ -4,6 +4,7 @@ function ChallengeOne() {
     const [count, setCount] = useState(0);
     console.log("1");
     useEffect(() => {
+      console.log("5")
       return () => {
         console.log("cleanup-2");
       };
@@ -17,6 +18,7 @@ function ChallengeOne() {
   }
   
   export function Child({ count }) {
+    console.log("2");
     useEffect(() => {
       console.log("3");
       return () => {
@@ -30,3 +32,14 @@ function ChallengeOne() {
 
 
 // * clean up function concept 
+
+/* 
+* Execution flow 
+
+* Mounting phase 
+*  1 = > 2 => 3 => 5 => 
+
+* Updating flow (re render flow)
+* 1 => 2 => cleanup-4 => cleanup-2 => 3 => 5 
+
+*/

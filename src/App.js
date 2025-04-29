@@ -44,6 +44,10 @@ import { ExampleOne } from './Component/Hooks/useTransition/ExampleOne';
 
 import ClassContainerComp from './Component/ClassComponent/ClassContainerComp';
 import ChallengeContainer from './Challenges/ChallengeContainer';
+import { HookContainer } from './Component/Hooks/HookContainer';
+import Form from './Component/Hooks/useReducerHook/FormReducer/Form';
+import { useSessionStorage } from './Component/Custom Hooks/useSessionStorage';
+import { Clock, ClockParent } from './Practice/Clock/Clock';
 
 
 export const userContext = React.createContext();
@@ -53,14 +57,18 @@ export const ratingContext = React.createContext(5);
 channelContext.displayName = 'myChannel'
 
 function App() {
+  const [value,setValue] = useSessionStorage("woo",0);
   return (
    <>
    <div className="App">
+
+    <HookContainer/>
+
    
    {/* <ClassContainerComp/> */}
 
 
-   <ChallengeContainer/>
+   {/* <ChallengeContainer/> */}
 
    {/* <ExampleOne /> */}
    
@@ -69,7 +77,11 @@ function App() {
    {/* <LayOutCompOne /> */}
 
    {/* <LayOutCompTwo /> */}
+   <button onClick={()=>setValue(value+1)}>add: {value}</button>
    </div>
+
+   {/* Practice Section below  */}
+   <ClockParent/>
    </>
   );
 }

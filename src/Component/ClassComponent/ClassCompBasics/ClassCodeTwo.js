@@ -18,7 +18,7 @@ import React, { Component } from 'react';
 /* 
  coming to optimize way of providing the handler
  
- then binding in the render function is not optimized since bind will a new copy of that hander every time render run 
+ then binding in the render function is not optimized since bind will a new copy of that handler every time render run 
 
  providing handler in arrow function body inside render has similar issues 
 

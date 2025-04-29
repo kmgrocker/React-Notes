@@ -5,7 +5,7 @@
     const divRef = useRef(null)
 
     useEffect(()=>{
-    //!  as u can see that use Ref is node capturing maechanism of DOM u can do it any type of element or event which is not Dom Element    
+    //!  as u can see that use Ref is node capturing mechanism of DOM u can do it any type of element or event which is not Dom Element    
 
     // ! see the change the h2 element 
         const inputNode = inputRef.current

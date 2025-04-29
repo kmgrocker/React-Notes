@@ -6,7 +6,9 @@
 
 > to only run at first Instance (like componentdidMount) we can provide the empty Array as a dependency in useEffect it will run only once when component is getting mounted
 
-> u can use useEffect or any other hook mulptiple time
+> u can use useEffect or any other hook multiple time
+
+> do not update the state on which you dependency array depend on it 
 
 # our File Notes
 
@@ -19,3 +21,8 @@
 # according to CodeEvoultion useEffect videos some of the Issue is already handled by React 18 in automatic state batching like useEffect rerender and in intervalHookCounter we did not provided count as dependency still counter was updated
 
 # in case of intervalClassCounter and IntervalHookCounter both visible same time u will see that hookCounter is lagging behind after someTime (what could be the reason may be that callbackQueue issue that in stack one getting pushed and after another)
+
+
+# resources 
+
+https://github.com/safak/youtube2022/blob/useeffect/src/App2.jsx
